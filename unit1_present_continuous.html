@@ -1,0 +1,937 @@
+<!DOCTYPE html>
+<html lang="si">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Unit 1 - Present Continuous | ඉංග්‍රීසි ව්‍යාකරණ</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Sinhala:wght@300;400;600;700&family=Merriweather:ital,wght@0,400;0,700;1,400&display=swap');
+
+  :root {
+    --bg: #0f1923;
+    --card: #162030;
+    --card2: #1c2b3a;
+    --accent: #f0a500;
+    --accent2: #e06c2a;
+    --text: #e8edf2;
+    --muted: #7a90a4;
+    --green: #3dd68c;
+    --red: #f25c5c;
+    --border: #243447;
+    --radius: 14px;
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: 'Noto Sans Sinhala', 'Merriweather', serif;
+    min-height: 100vh;
+    padding: 0 0 60px;
+  }
+
+  header {
+    background: linear-gradient(135deg, #0a1520 0%, #162030 60%, #1a2d1a 100%);
+    padding: 40px 24px 32px;
+    text-align: center;
+    border-bottom: 2px solid var(--accent);
+    position: relative;
+    overflow: hidden;
+  }
+  header::before {
+    content: '';
+    position: absolute;
+    top: -40px; left: -40px; right: -40px; bottom: -40px;
+    background: radial-gradient(ellipse at 20% 50%, rgba(240,165,0,0.07) 0%, transparent 60%),
+                radial-gradient(ellipse at 80% 50%, rgba(61,214,140,0.05) 0%, transparent 60%);
+    pointer-events: none;
+  }
+  .unit-badge {
+    display: inline-block;
+    background: var(--accent);
+    color: #0f1923;
+    font-weight: 700;
+    font-size: 0.78rem;
+    letter-spacing: 2px;
+    padding: 4px 14px;
+    border-radius: 20px;
+    margin-bottom: 14px;
+    font-family: 'Merriweather', serif;
+    text-transform: uppercase;
+  }
+  header h1 {
+    font-size: clamp(1.5rem, 5vw, 2.4rem);
+    font-weight: 700;
+    color: #fff;
+    line-height: 1.3;
+    margin-bottom: 8px;
+  }
+  header h1 span { color: var(--accent); }
+  header p {
+    color: var(--muted);
+    font-size: 0.95rem;
+    margin-top: 8px;
+    font-family: 'Noto Sans Sinhala', sans-serif;
+    font-weight: 300;
+  }
+
+  .container { max-width: 860px; margin: 0 auto; padding: 0 16px; }
+
+  /* NAV TABS */
+  .tabs {
+    display: flex;
+    gap: 8px;
+    padding: 24px 16px 0;
+    max-width: 860px;
+    margin: 0 auto;
+    flex-wrap: wrap;
+  }
+  .tab-btn {
+    background: var(--card);
+    border: 1.5px solid var(--border);
+    color: var(--muted);
+    padding: 10px 20px;
+    border-radius: 30px;
+    cursor: pointer;
+    font-family: 'Noto Sans Sinhala', sans-serif;
+    font-size: 0.88rem;
+    transition: all 0.2s;
+    font-weight: 600;
+  }
+  .tab-btn:hover { border-color: var(--accent); color: var(--accent); }
+  .tab-btn.active {
+    background: var(--accent);
+    border-color: var(--accent);
+    color: #0f1923;
+  }
+
+  /* SECTIONS */
+  .section { display: none; padding: 28px 16px 0; max-width: 860px; margin: 0 auto; }
+  .section.active { display: block; }
+
+  /* THEORY CARD */
+  .theory-card {
+    background: var(--card);
+    border: 1.5px solid var(--border);
+    border-radius: var(--radius);
+    padding: 28px;
+    margin-bottom: 20px;
+  }
+  .theory-card h2 {
+    font-size: 1.1rem;
+    color: var(--accent);
+    margin-bottom: 16px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-family: 'Merriweather', serif;
+  }
+  .theory-card h2 .icon {
+    background: rgba(240,165,0,0.15);
+    width: 32px; height: 32px;
+    border-radius: 8px;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 1rem; flex-shrink: 0;
+  }
+  .sinhala-note {
+    background: rgba(61,214,140,0.07);
+    border-left: 3px solid var(--green);
+    border-radius: 0 8px 8px 0;
+    padding: 14px 18px;
+    margin: 14px 0;
+    font-size: 0.97rem;
+    line-height: 1.8;
+  }
+  .sinhala-note strong { color: var(--green); }
+
+  .formula-box {
+    background: rgba(240,165,0,0.08);
+    border: 1.5px solid rgba(240,165,0,0.25);
+    border-radius: 10px;
+    padding: 16px 20px;
+    margin: 14px 0;
+    font-family: 'Merriweather', serif;
+    text-align: center;
+  }
+  .formula-box .formula {
+    font-size: 1.15rem;
+    font-weight: 700;
+    color: var(--accent);
+    letter-spacing: 0.5px;
+  }
+  .formula-box .formula-si {
+    font-size: 0.9rem;
+    color: var(--muted);
+    margin-top: 6px;
+  }
+
+  .example-list { margin: 12px 0; }
+  .example-item {
+    background: var(--card2);
+    border-radius: 8px;
+    padding: 12px 16px;
+    margin-bottom: 8px;
+    font-size: 0.93rem;
+    line-height: 1.6;
+  }
+  .example-item .en { color: #c9d8e8; font-style: italic; }
+  .example-item .si { color: var(--muted); font-size: 0.88rem; margin-top: 4px; }
+  .example-item .highlight { color: var(--accent); font-weight: 700; }
+
+  .pro-tip {
+    background: rgba(224,108,42,0.08);
+    border: 1.5px solid rgba(224,108,42,0.2);
+    border-radius: 10px;
+    padding: 14px 18px;
+    margin: 14px 0;
+    font-size: 0.9rem;
+    line-height: 1.7;
+  }
+  .pro-tip strong { color: var(--accent2); }
+
+  /* PRONOUNS TABLE */
+  .pronoun-table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0 6px;
+    margin: 14px 0;
+    font-size: 0.93rem;
+  }
+  .pronoun-table th {
+    background: rgba(240,165,0,0.12);
+    color: var(--accent);
+    padding: 10px 16px;
+    text-align: left;
+    font-weight: 600;
+  }
+  .pronoun-table td {
+    background: var(--card2);
+    padding: 10px 16px;
+    color: var(--text);
+  }
+  .pronoun-table tr td:first-child { border-radius: 8px 0 0 8px; }
+  .pronoun-table tr td:last-child { border-radius: 0 8px 8px 0; }
+  .pronoun-table .am { color: #7dd3fc; font-weight: 700; }
+  .pronoun-table .is { color: #86efac; font-weight: 700; }
+  .pronoun-table .are { color: #fbbf24; font-weight: 700; }
+
+  /* EXERCISE SECTION */
+  .exercise-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 22px;
+    flex-wrap: gap;
+    gap: 10px;
+  }
+  .exercise-header h2 {
+    font-size: 1.2rem;
+    color: #fff;
+    font-family: 'Merriweather', serif;
+  }
+  .score-display {
+    background: var(--card);
+    border: 1.5px solid var(--border);
+    border-radius: 10px;
+    padding: 8px 18px;
+    font-size: 0.88rem;
+    color: var(--muted);
+  }
+  .score-display span { color: var(--accent); font-weight: 700; font-size: 1rem; }
+
+  .exercise-card {
+    background: var(--card);
+    border: 1.5px solid var(--border);
+    border-radius: var(--radius);
+    padding: 24px;
+    margin-bottom: 16px;
+    transition: border-color 0.2s;
+  }
+  .exercise-card.correct { border-color: var(--green); }
+  .exercise-card.wrong { border-color: var(--red); }
+
+  .q-label {
+    font-size: 0.78rem;
+    color: var(--muted);
+    letter-spacing: 1px;
+    margin-bottom: 8px;
+    text-transform: uppercase;
+    font-family: 'Merriweather', serif;
+  }
+  .q-text {
+    font-size: 1rem;
+    line-height: 1.7;
+    margin-bottom: 16px;
+    color: var(--text);
+  }
+  .q-text .blank {
+    display: inline-block;
+    background: var(--card2);
+    border: 1.5px solid var(--border);
+    border-radius: 6px;
+    min-width: 130px;
+    padding: 2px 8px;
+    color: var(--accent);
+    font-style: italic;
+  }
+  .q-hint {
+    font-size: 0.83rem;
+    color: var(--muted);
+    margin-bottom: 10px;
+    background: var(--card2);
+    padding: 8px 14px;
+    border-radius: 6px;
+    border-left: 3px solid rgba(240,165,0,0.3);
+  }
+
+  .answer-input {
+    background: var(--card2);
+    border: 1.5px solid var(--border);
+    border-radius: 8px;
+    color: var(--text);
+    font-size: 0.97rem;
+    padding: 10px 16px;
+    width: 100%;
+    font-family: 'Merriweather', serif;
+    transition: border-color 0.2s;
+    outline: none;
+  }
+  .answer-input:focus { border-color: var(--accent); }
+  .answer-input.correct { border-color: var(--green); background: rgba(61,214,140,0.07); color: var(--green); }
+  .answer-input.wrong { border-color: var(--red); background: rgba(242,92,92,0.07); }
+
+  .options-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    margin-bottom: 8px;
+  }
+  .option-btn {
+    background: var(--card2);
+    border: 1.5px solid var(--border);
+    border-radius: 10px;
+    padding: 12px 16px;
+    color: var(--text);
+    cursor: pointer;
+    font-family: 'Noto Sans Sinhala', serif;
+    font-size: 0.9rem;
+    text-align: left;
+    transition: all 0.15s;
+    line-height: 1.5;
+  }
+  .option-btn:hover:not(:disabled) { border-color: var(--accent); background: rgba(240,165,0,0.06); }
+  .option-btn.selected-correct { border-color: var(--green); background: rgba(61,214,140,0.1); color: var(--green); }
+  .option-btn.selected-wrong { border-color: var(--red); background: rgba(242,92,92,0.1); color: var(--red); }
+  .option-btn.reveal-correct { border-color: var(--green); background: rgba(61,214,140,0.07); }
+  .option-btn:disabled { cursor: default; }
+
+  .feedback {
+    margin-top: 12px;
+    padding: 12px 16px;
+    border-radius: 8px;
+    font-size: 0.9rem;
+    line-height: 1.6;
+    display: none;
+  }
+  .feedback.show { display: block; }
+  .feedback.correct { background: rgba(61,214,140,0.1); border: 1px solid rgba(61,214,140,0.3); color: var(--green); }
+  .feedback.wrong { background: rgba(242,92,92,0.1); border: 1px solid rgba(242,92,92,0.3); color: #f8a5a5; }
+
+  .check-btn {
+    background: var(--accent);
+    color: #0f1923;
+    border: none;
+    border-radius: 8px;
+    padding: 10px 24px;
+    font-weight: 700;
+    cursor: pointer;
+    font-size: 0.92rem;
+    margin-top: 12px;
+    transition: background 0.15s;
+    font-family: 'Noto Sans Sinhala', sans-serif;
+  }
+  .check-btn:hover { background: #e09500; }
+  .check-btn:disabled { background: var(--card2); color: var(--muted); cursor: default; }
+
+  /* PROGRESS BAR */
+  .progress-wrap {
+    background: var(--card);
+    border: 1.5px solid var(--border);
+    border-radius: var(--radius);
+    padding: 20px 24px;
+    margin-bottom: 20px;
+  }
+  .progress-label {
+    display: flex; justify-content: space-between;
+    font-size: 0.85rem; color: var(--muted);
+    margin-bottom: 10px;
+  }
+  .progress-bar-bg {
+    background: var(--card2);
+    border-radius: 10px;
+    height: 8px;
+    overflow: hidden;
+  }
+  .progress-bar-fill {
+    height: 100%;
+    background: linear-gradient(90deg, var(--accent), var(--green));
+    border-radius: 10px;
+    transition: width 0.4s ease;
+  }
+
+  /* MATCHING EXERCISE */
+  .matching-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+  }
+  .match-col h3 {
+    font-size: 0.82rem;
+    color: var(--muted);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 10px;
+    padding-left: 4px;
+  }
+  .match-item {
+    background: var(--card2);
+    border: 1.5px solid var(--border);
+    border-radius: 10px;
+    padding: 12px 16px;
+    margin-bottom: 8px;
+    cursor: pointer;
+    font-size: 0.88rem;
+    line-height: 1.5;
+    transition: all 0.15s;
+    position: relative;
+  }
+  .match-item:hover { border-color: var(--accent); }
+  .match-item.selected { border-color: var(--accent); background: rgba(240,165,0,0.07); }
+  .match-item.matched-correct { border-color: var(--green); background: rgba(61,214,140,0.07); cursor: default; color: var(--green); }
+  .match-item.matched-wrong { border-color: var(--red); background: rgba(242,92,92,0.07); cursor: default; animation: shake 0.3s; }
+
+  @keyframes shake {
+    0%,100% { transform: translateX(0); }
+    25% { transform: translateX(-6px); }
+    75% { transform: translateX(6px); }
+  }
+
+  .finish-btn {
+    display: block;
+    width: 100%;
+    background: linear-gradient(135deg, var(--accent), var(--accent2));
+    color: #0f1923;
+    border: none;
+    border-radius: 12px;
+    padding: 16px;
+    font-weight: 700;
+    font-size: 1rem;
+    cursor: pointer;
+    margin-top: 24px;
+    font-family: 'Noto Sans Sinhala', sans-serif;
+    transition: opacity 0.2s;
+  }
+  .finish-btn:hover { opacity: 0.9; }
+
+  .result-card {
+    background: var(--card);
+    border: 2px solid var(--accent);
+    border-radius: var(--radius);
+    padding: 36px 28px;
+    text-align: center;
+    margin-top: 20px;
+    display: none;
+  }
+  .result-card.show { display: block; animation: fadeIn 0.5s; }
+  @keyframes fadeIn { from { opacity: 0; transform: translateY(12px); } to { opacity: 1; transform: translateY(0); } }
+  .result-card .big-score { font-size: 3rem; font-weight: 700; color: var(--accent); }
+  .result-card p { color: var(--muted); margin-top: 8px; font-size: 0.95rem; }
+  .result-card .result-msg { font-size: 1.1rem; color: var(--text); margin-top: 16px; font-weight: 600; }
+  .retry-btn {
+    background: var(--card2);
+    border: 1.5px solid var(--border);
+    color: var(--text);
+    border-radius: 10px;
+    padding: 12px 32px;
+    font-size: 0.95rem;
+    cursor: pointer;
+    margin-top: 20px;
+    font-family: 'Noto Sans Sinhala', sans-serif;
+    font-weight: 600;
+    transition: all 0.15s;
+  }
+  .retry-btn:hover { border-color: var(--accent); color: var(--accent); }
+
+  .divider {
+    border: none;
+    border-top: 1.5px solid var(--border);
+    margin: 20px 0;
+  }
+
+  @media (max-width: 600px) {
+    .options-grid { grid-template-columns: 1fr; }
+    .matching-container { grid-template-columns: 1fr; }
+    header h1 { font-size: 1.4rem; }
+    .theory-card { padding: 20px 16px; }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="unit-badge">Unit 1</div>
+  <h1>Present Continuous<br><span>(I am doing)</span></h1>
+  <p>සිංහල පැහැදිලි කිරීම් සහිත ව්‍යාකරණ පාඩම</p>
+</header>
+
+<div class="tabs container" id="tabs">
+  <button class="tab-btn active" onclick="showTab('theory')">📖 න්‍යාය</button>
+  <button class="tab-btn" onclick="showTab('exercises')">✏️ අභ්‍යාස</button>
+  <button class="tab-btn" onclick="showTab('matching')">🔗 ගැළපීම</button>
+</div>
+
+<!-- ============ THEORY SECTION ============ -->
+<div class="section active" id="theory">
+
+  <div class="theory-card">
+    <h2><span class="icon">📌</span> Present Continuous යනු කුමක්ද?</h2>
+    <div class="sinhala-note">
+      <strong>Present Continuous</strong> භාවිතා කරන්නේ <strong>දැනට සිදු වන</strong> ක්‍රියාවක් ගැන කතා කිරීමට.<br>
+      ක්‍රියාව ආරම්භ වී ඇති, නමුත් තවමත් ඉවර වී නැහැ.
+    </div>
+
+    <div class="formula-box">
+      <div class="formula">am / is / are + verb + -ing</div>
+      <div class="formula-si">= ක්‍රියාව + "ing" + am/is/are</div>
+    </div>
+
+    <div class="example-list">
+      <div class="example-item">
+        <div class="en">Sarah <span class="highlight">is driving</span> to work.</div>
+        <div class="si">සාරා දැන් වැඩට ගාඩිය පදවනවා. (දැන් සිදු වෙනවා)</div>
+      </div>
+      <div class="example-item">
+        <div class="en">I <span class="highlight">am trying</span> to work.</div>
+        <div class="si">මම වැඩ කරන්න හදනවා. (දැන් සිදු වෙනවා)</div>
+      </div>
+      <div class="example-item">
+        <div class="en">He <span class="highlight">is having</span> a shower.</div>
+        <div class="si">ඔහු දැන් බාත් රූම් එකේ. (දැන් සිදු වෙනවා)</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="theory-card">
+    <h2><span class="icon">🔤</span> am / is / are — කවදා යොදන්නද?</h2>
+    <table class="pronoun-table">
+      <tr>
+        <th>Pronoun</th>
+        <th>Helper Verb</th>
+        <th>Short Form</th>
+        <th>සිංහල</th>
+      </tr>
+      <tr>
+        <td>I</td>
+        <td class="am">am</td>
+        <td>I'm</td>
+        <td>මම</td>
+      </tr>
+      <tr>
+        <td>He / She / It</td>
+        <td class="is">is</td>
+        <td>He's / She's</td>
+        <td>ඔහු / ඇය / ඒ</td>
+      </tr>
+      <tr>
+        <td>We / You / They</td>
+        <td class="are">are</td>
+        <td>We're / You're</td>
+        <td>අපි / ඔබ / ඔවුන්</td>
+      </tr>
+    </table>
+  </div>
+
+  <div class="theory-card">
+    <h2><span class="icon">⏰</span> කවදා Present Continuous භාවිතා කරන්නද?</h2>
+
+    <div class="sinhala-note">
+      <strong>A. දැනට සිදු වෙන ක්‍රියා</strong> — ඔබ කතා කරන මොහොතේ සිදු වෙන දෙය
+    </div>
+    <div class="example-list">
+      <div class="example-item">
+        <div class="en">"What's going on?" → She <span class="highlight">is sleeping</span>.</div>
+        <div class="si">ඇය දැන් නිදාගන්නවා.</div>
+      </div>
+    </div>
+
+    <div class="sinhala-note">
+      <strong>B. ආරම්භ කළ, ඉවර නොවූ දෙයක්</strong> — කතා කරන වෙලාවේ ඒ ක්‍රියාව කරමින් නැතත්
+    </div>
+    <div class="example-list">
+      <div class="example-item">
+        <div class="en">Kate <span class="highlight">is learning</span> Italian.</div>
+        <div class="si">කේට් ඉතාලි ඉගෙනගන්නවා. (ඒ course ඉවර වෙලා නැහැ)</div>
+      </div>
+    </div>
+
+    <div class="sinhala-note">
+      <strong>C. "today / this week / this year"</strong> සමඟ
+    </div>
+    <div class="example-list">
+      <div class="example-item">
+        <div class="en">You <span class="highlight">are working</span> hard today.</div>
+        <div class="si">ඔබ අද ගොඩාක් වෙහෙසෙනවා.</div>
+      </div>
+    </div>
+
+    <div class="sinhala-note">
+      <strong>D. වෙනස් වෙමින් ඇති දෙයක්</strong> — getting / becoming / increasing / changing
+    </div>
+    <div class="example-list">
+      <div class="example-item">
+        <div class="en">The weather <span class="highlight">is getting</span> better.</div>
+        <div class="si">කාලගුණය හොඳ වෙමින් ඉන්නවා.</div>
+      </div>
+      <div class="example-item">
+        <div class="en">The population <span class="highlight">is increasing</span>.</div>
+        <div class="si">ජනගහනය ඉහළ යමින් ඉන්නවා.</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="theory-card">
+    <h2><span class="icon">⚠️</span> සාමාන්‍ය වැරදි — වළකිය යුතු ආකාරය</h2>
+    <div class="pro-tip">
+      <strong>❌ වැරදි:</strong> "It doesn't rain any more."<br>
+      <strong>✅ නිවැරදි:</strong> "It <span style="color:var(--green)">isn't raining</span> any more."<br>
+      (දැනට නොවෙන ක්‍රියාවට නිෂේධනය: <strong>isn't / aren't + verb-ing</strong>)
+    </div>
+    <div class="pro-tip">
+      <strong>❌ වැරදි:</strong> "Where's Mark? He has a shower."<br>
+      <strong>✅ නිවැරදි:</strong> "He <span style="color:var(--green)">is having</span> a shower."
+    </div>
+  </div>
+
+</div><!-- /theory -->
+
+<!-- ============ EXERCISES SECTION ============ -->
+<div class="section" id="exercises">
+
+  <div class="progress-wrap">
+    <div class="progress-label">
+      <span>ප්‍රගතිය</span>
+      <span id="prog-text">0 / 8 ඉවරයි</span>
+    </div>
+    <div class="progress-bar-bg">
+      <div class="progress-bar-fill" id="prog-bar" style="width:0%"></div>
+    </div>
+  </div>
+
+  <div class="exercise-header">
+    <h2>✏️ Fill in the Blanks</h2>
+    <div class="score-display">ලකුණු: <span id="ex-score">0</span> / 8</div>
+  </div>
+
+  <!-- Q1 -->
+  <div class="exercise-card" id="eq1">
+    <div class="q-label">ප්‍රශ්නය 1</div>
+    <div class="q-text">Please don't make so much noise. I <span class="blank" id="a1-display">______</span> to work.</div>
+    <div class="q-hint">🔑 සලකාව: try + I → I am + trying</div>
+    <input class="answer-input" id="a1" type="text" placeholder="ඔබේ පිළිතුර ටයිප් කරන්න..." autocomplete="off">
+    <button class="check-btn" onclick="checkFill('a1','am trying',1)">පරීක්ෂා කරන්න ✓</button>
+    <div class="feedback" id="fb1"></div>
+  </div>
+
+  <!-- Q2 -->
+  <div class="exercise-card" id="eq2">
+    <div class="q-label">ප්‍රශ්නය 2</div>
+    <div class="q-text">Let's go out now. It <span class="blank">______</span> any more.</div>
+    <div class="q-hint">🔑 rain (negative) — "it" → is</div>
+    <input class="answer-input" id="a2" type="text" placeholder="ඔබේ පිළිතුර ටයිප් කරන්න..." autocomplete="off">
+    <button class="check-btn" onclick="checkFill('a2','isn\'t raining',2)">පරීක්ෂා කරන්න ✓</button>
+    <div class="feedback" id="fb2"></div>
+  </div>
+
+  <!-- Q3 -->
+  <div class="exercise-card" id="eq3">
+    <div class="q-label">ප්‍රශ්නය 3</div>
+    <div class="q-text">You can turn off the radio. I <span class="blank">______</span> to it.</div>
+    <div class="q-hint">🔑 listen (negative) — "I" → am</div>
+    <input class="answer-input" id="a3" type="text" placeholder="ඔබේ පිළිතුර ටයිප් කරන්න..." autocomplete="off">
+    <button class="check-btn" onclick="checkFill('a3','am not listening',3)">පරීක්ෂා කරන්න ✓</button>
+    <div class="feedback" id="fb3"></div>
+  </div>
+
+  <!-- Q4 -->
+  <div class="exercise-card" id="eq4">
+    <div class="q-label">ප්‍රශ්නය 4</div>
+    <div class="q-text">Andrew started evening classes recently. He <span class="blank">______</span> Japanese.</div>
+    <div class="q-hint">🔑 learn — "He" → is</div>
+    <input class="answer-input" id="a4" type="text" placeholder="ඔබේ පිළිතුර ටයිප් කරන්න..." autocomplete="off">
+    <button class="check-btn" onclick="checkFill('a4','is learning',4)">පරීක්ෂා කරන්න ✓</button>
+    <div class="feedback" id="fb4"></div>
+  </div>
+
+  <!-- Q5 MCQ -->
+  <div class="exercise-card" id="eq5">
+    <div class="q-label">ප්‍රශ්නය 5 — නිවැරදි විකල්පය තෝරන්න</div>
+    <div class="q-text">The situation is already very bad and now it ______ worse.</div>
+    <div class="options-grid">
+      <button class="option-btn" onclick="checkMCQ(this,'is getting',5)">is getting</button>
+      <button class="option-btn" onclick="checkMCQ(this,'gets',5)">gets</button>
+      <button class="option-btn" onclick="checkMCQ(this,'getting',5)">getting</button>
+      <button class="option-btn" onclick="checkMCQ(this,'got',5)">got</button>
+    </div>
+    <div class="feedback" id="fb5"></div>
+  </div>
+
+  <!-- Q6 MCQ -->
+  <div class="exercise-card" id="eq6">
+    <div class="q-label">ප්‍රශ්නය 6 — නිවැරදි විකල්පය තෝරන්න</div>
+    <div class="q-text">Is your English ______ better?</div>
+    <div class="options-grid">
+      <button class="option-btn" onclick="checkMCQ(this,'getting',6)">getting</button>
+      <button class="option-btn" onclick="checkMCQ(this,'gets',6)">gets</button>
+      <button class="option-btn" onclick="checkMCQ(this,'get',6)">get</button>
+      <button class="option-btn" onclick="checkMCQ(this,'to get',6)">to get</button>
+    </div>
+    <div class="feedback" id="fb6"></div>
+  </div>
+
+  <!-- Q7 Fill -->
+  <div class="exercise-card" id="eq7">
+    <div class="q-label">ප්‍රශ්නය 7</div>
+    <div class="q-text">They <span class="blank">______</span> a new hospital. It will be finished next year.</div>
+    <div class="q-hint">🔑 build — "They" → are</div>
+    <input class="answer-input" id="a7" type="text" placeholder="ඔබේ පිළිතුර ටයිප් කරන්න..." autocomplete="off">
+    <button class="check-btn" onclick="checkFill('a7','are building',7)">පරීක්ෂා කරන්න ✓</button>
+    <div class="feedback" id="fb7"></div>
+  </div>
+
+  <!-- Q8 MCQ -->
+  <div class="exercise-card" id="eq8">
+    <div class="q-label">ප්‍රශ්නය 8 — නිවැරදි විකල්පය තෝරන්න</div>
+    <div class="q-text">Ben is a student, but he's not very happy. He ______ his course.</div>
+    <div class="options-grid">
+      <button class="option-btn" onclick="checkMCQ(this,"isn't enjoying",8)">isn't enjoying</button>
+      <button class="option-btn" onclick="checkMCQ(this,'doesn\'t enjoy',8)">doesn't enjoy</button>
+      <button class="option-btn" onclick="checkMCQ(this,'not enjoys',8)">not enjoys</button>
+      <button class="option-btn" onclick="checkMCQ(this,'isn\'t enjoy',8)">isn't enjoy</button>
+    </div>
+    <div class="feedback" id="fb8"></div>
+  </div>
+
+  <div class="result-card" id="final-result">
+    <div class="big-score" id="final-score-text">0/8</div>
+    <p>ලකුණු</p>
+    <div class="result-msg" id="result-msg"></div>
+    <button class="retry-btn" onclick="retryExercises()">🔄 නැවත උත්සාහ කරන්න</button>
+  </div>
+
+  <button class="finish-btn" id="finish-btn" onclick="showResult()">ප්‍රතිඵල බලන්න →</button>
+
+</div><!-- /exercises -->
+
+<!-- ============ MATCHING SECTION ============ -->
+<div class="section" id="matching">
+
+  <div class="theory-card" style="margin-bottom:20px;">
+    <h2><span class="icon">🔗</span> ගැළපීමේ අභ්‍යාසය</h2>
+    <div class="sinhala-note">
+      වම් පිටේ ඇති වාක්‍ය සමඟ, දකුණු පිටේ ඇති නිසි අඛ්‍යය ගැළපෙනවා ද? <br>
+      වම් පිටෙන් එකක් ක්ලික් කර, ඉන්පසු දකුණු පිටෙන් ගැළපෙන දෙය ක්ලික් කරන්න.
+    </div>
+    <div class="score-display" style="margin-top:10px;">ගැළපීම්: <span id="match-score">0</span> / 6</div>
+  </div>
+
+  <div class="matching-container">
+    <div class="match-col">
+      <h3>📝 වාක්‍ය</h3>
+      <div class="match-item" id="ml1" onclick="selectLeft('ml1','1')">1. Please don't make noise.</div>
+      <div class="match-item" id="ml2" onclick="selectLeft('ml2','2')">2. We need to leave soon.</div>
+      <div class="match-item" id="ml3" onclick="selectLeft('ml3','3')">3. I need to eat something soon.</div>
+      <div class="match-item" id="ml4" onclick="selectLeft('ml4','4')">4. Things are not so good at work.</div>
+      <div class="match-item" id="ml5" onclick="selectLeft('ml5','5')">5. It isn't true what they say.</div>
+      <div class="match-item" id="ml6" onclick="selectLeft('ml6','6')">6. We're going to get wet.</div>
+    </div>
+    <div class="match-col">
+      <h3>🔄 අඛ්‍යය</h3>
+      <div class="match-item" id="mr-a" onclick="selectRight('mr-a','1')">a. I'm trying to work.</div>
+      <div class="match-item" id="mr-b" onclick="selectRight('mr-b','5')">b. They're lying.</div>
+      <div class="match-item" id="mr-c" onclick="selectRight('mr-c','6')">c. It's starting to rain.</div>
+      <div class="match-item" id="mr-d" onclick="selectRight('mr-d','3')">d. I'm getting hungry.</div>
+      <div class="match-item" id="mr-e" onclick="selectRight('mr-e','2')">e. It's getting late.</div>
+      <div class="match-item" id="mr-f" onclick="selectRight('mr-f','4')">f. The company is losing money.</div>
+    </div>
+  </div>
+
+  <div id="match-result" class="result-card" style="margin-top:24px;">
+    <div class="big-score" id="match-final-score">6/6</div>
+    <p>නිවැරදිව ගැළපුවා!</p>
+    <div class="result-msg" id="match-result-msg"></div>
+    <button class="retry-btn" onclick="retryMatching()">🔄 නැවත උත්සාහ කරන්න</button>
+  </div>
+
+</div><!-- /matching -->
+
+<script>
+  // ===== TABS =====
+  function showTab(name) {
+    document.querySelectorAll('.section').forEach(s => s.classList.remove('active'));
+    document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+    document.getElementById(name).classList.add('active');
+    event.target.classList.add('active');
+  }
+
+  // ===== EXERCISES =====
+  let exScore = 0;
+  let answered = new Array(9).fill(false);
+
+  function checkFill(inputId, correct, qNum) {
+    const input = document.getElementById(inputId);
+    const val = input.value.trim().toLowerCase();
+    const correctLower = correct.toLowerCase();
+    const isCorrect = val === correctLower;
+
+    if (answered[qNum]) return;
+    answered[qNum] = true;
+    input.disabled = true;
+
+    const fb = document.getElementById('fb' + qNum);
+    const card = document.getElementById('eq' + qNum);
+
+    if (isCorrect) {
+      input.classList.add('correct');
+      fb.className = 'feedback correct show';
+      fb.innerHTML = '✅ නිවැරදියි! — <strong>' + correct + '</strong>';
+      card.classList.add('correct');
+      exScore++;
+    } else {
+      input.classList.add('wrong');
+      fb.className = 'feedback wrong show';
+      fb.innerHTML = '❌ නිවැරදි පිළිතුර: <strong>' + correct + '</strong>';
+      card.classList.add('wrong');
+    }
+
+    document.querySelector('#eq' + qNum + ' .check-btn').disabled = true;
+    updateProgress();
+  }
+
+  function checkMCQ(btn, correct, qNum) {
+    if (answered[qNum]) return;
+    answered[qNum] = true;
+
+    const allBtns = btn.closest('.exercise-card').querySelectorAll('.option-btn');
+    allBtns.forEach(b => b.disabled = true);
+
+    const fb = document.getElementById('fb' + qNum);
+    const card = document.getElementById('eq' + qNum);
+    const selected = btn.textContent.trim();
+
+    if (selected === correct) {
+      btn.classList.add('selected-correct');
+      fb.className = 'feedback correct show';
+      fb.innerHTML = '✅ නිවැරදියි! — <strong>' + correct + '</strong>';
+      card.classList.add('correct');
+      exScore++;
+    } else {
+      btn.classList.add('selected-wrong');
+      fb.className = 'feedback wrong show';
+      fb.innerHTML = '❌ නිවැරදි පිළිතුර: <strong>' + correct + '</strong>';
+      card.classList.add('wrong');
+      allBtns.forEach(b => {
+        if (b.textContent.trim() === correct) b.classList.add('reveal-correct');
+      });
+    }
+
+    document.getElementById('ex-score').textContent = exScore;
+    updateProgress();
+  }
+
+  function updateProgress() {
+    const done = answered.filter(Boolean).length;
+    document.getElementById('prog-text').textContent = done + ' / 8 ඉවරයි';
+    document.getElementById('prog-bar').style.width = (done / 8 * 100) + '%';
+    document.getElementById('ex-score').textContent = exScore;
+  }
+
+  function showResult() {
+    const card = document.getElementById('final-result');
+    card.classList.add('show');
+    document.getElementById('final-score-text').textContent = exScore + '/8';
+    const pct = exScore / 8;
+    let msg = '';
+    if (pct === 1) msg = '🏆 සම්පූර්ණ ලකුණු! ඉතා හොඳයි!';
+    else if (pct >= 0.75) msg = '🎉 ඉතා හොඳ ප්‍රතිඵලයක්!';
+    else if (pct >= 0.5) msg = '👍 හොඳ ප්‍රයත්නයක්. නැවත කියවා බලන්න.';
+    else msg = '📚 නැවත න්‍යාය කොටස කියවා, නැවත උත්සාහ කරන්න.';
+    document.getElementById('result-msg').textContent = msg;
+    document.getElementById('finish-btn').style.display = 'none';
+    card.scrollIntoView({ behavior: 'smooth' });
+  }
+
+  function retryExercises() {
+    location.reload();
+  }
+
+  // ===== MATCHING =====
+  let selectedLeft = null;
+  let selectedLeftId = null;
+  let matchScore = 0;
+  let matchedCount = 0;
+
+  function selectLeft(id, val) {
+    const el = document.getElementById(id);
+    if (el.classList.contains('matched-correct')) return;
+
+    document.querySelectorAll('.match-col:first-child .match-item').forEach(i => i.classList.remove('selected'));
+    el.classList.add('selected');
+    selectedLeft = val;
+    selectedLeftId = id;
+  }
+
+  function selectRight(id, val) {
+    const el = document.getElementById(id);
+    if (el.classList.contains('matched-correct')) return;
+    if (!selectedLeft) return;
+
+    if (selectedLeft === val) {
+      // correct
+      el.classList.add('matched-correct');
+      document.getElementById(selectedLeftId).classList.remove('selected');
+      document.getElementById(selectedLeftId).classList.add('matched-correct');
+      matchScore++;
+      matchedCount++;
+      document.getElementById('match-score').textContent = matchScore;
+    } else {
+      // wrong
+      el.classList.add('matched-wrong');
+      document.getElementById(selectedLeftId).classList.remove('selected');
+      document.getElementById(selectedLeftId).classList.add('matched-wrong');
+      setTimeout(() => {
+        el.classList.remove('matched-wrong');
+        document.getElementById(selectedLeftId).classList.remove('matched-wrong');
+      }, 600);
+    }
+
+    selectedLeft = null;
+    selectedLeftId = null;
+
+    if (matchedCount === 6) {
+      const res = document.getElementById('match-result');
+      res.classList.add('show');
+      document.getElementById('match-final-score').textContent = matchScore + '/6';
+      const msg = matchScore === 6 ? '🏆 සියලු ගැළපීම් නිවැරදියි!' : '👍 හොඳ ප්‍රයත්නයක්!';
+      document.getElementById('match-result-msg').textContent = msg;
+      res.scrollIntoView({ behavior: 'smooth' });
+    }
+  }
+
+  function retryMatching() {
+    location.reload();
+  }
+</script>
+
+</body>
+</html>
